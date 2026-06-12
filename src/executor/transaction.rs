@@ -3,7 +3,7 @@ use std::sync::Arc;
 
 use alloy::signers::local::PrivateKeySigner;
 use alloy::{
-    network::{eip2718::Encodable2718, EthereumWallet, TransactionBuilder},
+    network::{eip2718::Encodable2718, EthereumWallet, NetworkTransactionBuilder, TransactionBuilder},
     primitives::{keccak256, Address, Bytes},
     providers::{Provider, RootProvider},
     rpc::types::eth::TransactionRequest,

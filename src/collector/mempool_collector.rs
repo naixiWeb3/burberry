@@ -13,7 +13,6 @@ use std::{
     pin::Pin,
     task::{Context, Poll},
 };
-use tracing::error;
 
 pub struct MempoolCollector {
     provider: Arc<dyn Provider>,
