@@ -10,7 +10,7 @@ async-stream = "0.3"
 async-trait = "0.1"
 eyre = "0.6"
 futures = "0.3"
-reqwest = { version = "0.12", features = ["json"], optional = true }
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls"], optional = true }
 serde_json = { version = "1.0", optional = true }
 thiserror = { version = "1.0", optional = true }
 tokio = { version = "1", features = ["rt"] }
@@ -22,4 +22,6 @@ ethereum = ["dep:alloy", "dep:thiserror"]
 telegram = ["dep:reqwest", "dep:serde_json"]
 
 [dev-dependencies]
+dotenvy = "0.15"
 tokio = { version = "1", features = ["full"] }
+tracing-subscriber = "0.3"
